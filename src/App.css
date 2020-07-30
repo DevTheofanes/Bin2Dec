@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.app {
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  outline: 0;
+  /* text-align: center; */
+  background-color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header span {
+  color: #111;
+  font-size: 48px;
+  line-height: 58px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header h1 {
+  color: #eee;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content p {
+  margin: 15px auto;
+  color: #eee;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.check {
+  display: grid;
+  max-width: 390px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.check label {
+  color: #eee;
+}
+
+.message {
+  display: none;
+  margin: 25px auto 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.message.active {
+  display: inline-block;
+}
+
+#error {
+  color: #e74c3c;
+}
+
+#hit {
+  color: #27ae60;
+}
+
+.input {
+  background-color: #fff;
+  padding: 8px 20px;
+  width: 390px;
+  font-size: 28px;
+  line-height: 38px;
+  margin: 25px auto 25px;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer__error {
+  /* display: none; */
+  color: #ccc;
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result {
+  visibility: hidden;
+  color: #fff;
+  font-size: 40px;
+  height: 50px;
+}
+
+.result.active {
+  visibility: visible;
 }
