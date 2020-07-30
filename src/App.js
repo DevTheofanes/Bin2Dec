@@ -61,12 +61,17 @@ class App extends Component {
   //Lida com as conversões
 
   handleConversions = (num, option) => {
-    console.log(`
-      Num é igual à =${num}
-      Typeof de Num =${typeof num}
-      Option é igual à =${option}
-    `);
-
+    if (!num) {
+      this.setState({
+        message: "",
+        color: "hit",
+        classMessage: "message",
+        result: 0,
+        classResult: "result",
+        messageFooter: "",
+      });
+      return;
+    }
     if (!this.isNumber(num)) {
       this.setState({
         classResult: "result",
