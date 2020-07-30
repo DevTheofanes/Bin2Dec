@@ -5,8 +5,19 @@
   margin: 0 auto;
   margin-top: 20vh;
   outline: 0;
-  /* text-align: center; */
   background-color: #333;
+
+  animation: up 1s ease-in-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header {
